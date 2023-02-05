@@ -1,0 +1,47 @@
+{% extends "Drafter/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="container-fluid" style='text-align: center'>
+    <h1>Create Room</h>
+    <form class="form" action="/rooms" method="post">
+        {% csrf_token %}
+        <input type="number" name="room-id" id="room-id" placeholder="Enter Room Code">
+        <label for="teams_amount">How many teams:</label>
+        <select name="teams_amount" id="teams_amount" >
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+        </select>
+        <br>
+        <input type="text" name="room-name" id="room-name" placeholder="Enter Your Name">
+        <label for="positions">Roster Positions:</label>
+        <select name="positions" id="positions">
+            <option value="standard">Standard</option>
+            <option value="2flex">2 Flex</option>
+            <option value="nokicker">No Kicker</option>
+            
+        </select>
+  <br>
+        <button id="actionBtn">Create New Room</button>
+    </form>
+</div>
+
+<script>
+    const roomNameInp = document.getElementById("room-id")
+    const actionBtn = document.getElementById("actionBtn")
+    roomNameInp.addEventListener('keyup', e => {
+        if (e.currentTarget.value == "") {
+            actionBtn.innerText = "Create New Room"
+        } else {
+            actionBtn.innerText = "Join"
+        }
+    })        
+</script>
+    
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'Drafter/index.js' %}"></script>
+{% endblock %}

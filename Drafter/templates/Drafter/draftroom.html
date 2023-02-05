@@ -1,0 +1,51 @@
+{% extends "Drafter/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div style="margin: 40px;">   
+    <form id="form">
+        {% if started == 0 %}
+            <button id="startbutton" class="btn btn-primary" value="{{started}}">Start</button>
+        {% else %} 
+            <button id="startbutton" class="btn btn-primary" value="{{started}}"hidden>Start</button>
+        {% endif %}
+    </form>
+    <h1 id="roomid" hidden>{{room}}</h1>
+    <div class="teamplayergrid">
+        <div id="TeamRosters" class="grid-container{{range_list|last}}" >
+        </div>
+        <div class="draftgrid">
+            
+            
+            {% for i in rounds %}
+            <div id="column{{i}}" class="grid-container{{range_list|last}}"  >
+                {% for j in range_list %}
+                <div id="roster{{j}}i{{i}}" class="unidentified">
+                    Empty
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %} 
+        </div>  
+    </div>
+    <div class="row">
+        <div id="listedplayers" style= "height:500px;border:1px solid #ccc;overflow:auto;" class="col">
+        </div>
+        <div id="timer" class="col" style="border:1px solid #ccc;">
+            <div >
+                <h1 style="text-align: center;">Time Left</h1>
+                <h1 id="countdown" style="text-align: center;">60</h1>
+            </div>    
+        </div>   
+    </div>
+</div>
+    
+
+    
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'Drafter/index.js' %}"></script>
+{% endblock %}

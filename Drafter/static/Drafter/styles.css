@@ -1,0 +1,149 @@
+.mycontainer{
+    width: 1400px;
+    margin: auto;
+  }
+  
+
+
+
+.drafted {
+  
+  width: 100px;
+  height: 100px;
+}
+.try_a_draft{
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 10px;
+}
+
+.yuh {
+
+  background-color: cadetblue;
+}
+
+.highlight-column{
+  background-color: gray;
+  
+}
+.grid-container8 {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  gap: 5px;
+  
+  padding-bottom: 2px;
+}
+.grid-container10 {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100px,1fr);
+  
+  gap: 5px;
+  
+  padding-bottom: 2px;
+}
+
+.grid-container12 {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+  gap: 5px;
+  
+  padding-bottom: 2px;
+}
+
+.grid-container12 > div, .grid-container10 > div, .grid-container8 > div {
+  
+  border-radius: 10px;
+  
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+  
+}
+
+#time{
+  font-size: 30px;
+}
+
+.WR{
+  background-color: rgba(86, 201, 248, 0.8);
+}
+
+.RB{
+  background-color: rgba(143, 242, 202, 0.8);
+}
+
+.QB{
+  background-color: rgba(239, 116, 161, 0.8);
+}
+
+.TE{
+  background-color: rgba(254, 174, 88, 0.8);
+}
+
+.K{
+  background-color: rgba(182, 185, 255, 0.8);
+}
+
+.unidentified{
+  background-color: gray;
+}
+
+
+
+
+.center {
+  margin: auto;
+  width: 85%;
+  
+  padding: 10px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.middle {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) }
+
+.draftgrid {
+  height:800px;
+  width:100%;
+  resize: both;
+}
+
+.teamplayergrid {
+  overflow:auto;
+  resize: both;
+  min-width:100%;
+  max-width:100%;
+  max-height: 1000px;
+}
