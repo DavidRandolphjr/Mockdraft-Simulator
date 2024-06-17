@@ -1,4 +1,4 @@
-# CS50W Capstone
+# Fantasy Football Mockdraft Simulator
 For this project I created a fantasy sports mock draft simulator to help me prepare for my fantasy football leagues. I have played fantasy football for years, and I have always wanted to perfect my drafting strategy to maximize my win potential. The problem with most mock draft simulators is that they are "one size fits all", meaning that they treat every group of people the same. In real life, everyone has different draft strategies, and in this application, I find that I can better simulate my fantasy leagues' drafting strategies by uploading a custom list that the AI will end up drafting from.
 
 Creating this project required me to use HTML, CSS, Bootstrap, Javascript, Python, and the framework Django. To make my application function with interacting users, I had to learn Django Channels as well. Considering that this was the first time I had been introduced with Django Channels, there was a lot of trial and error involved. However, I believe I made the right choice in the end.
